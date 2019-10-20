@@ -11,10 +11,10 @@ public class LinkList {
 		lin.add("yooyin");
 		System.out.printf("get(2):%s\n",lin.get(2));
 		System.out.printf("get(3):%s\n",lin.get(3));
-		System.out.printf("contains(\"Hello\"):%s\n",lin.contains("Hello"));
+		System.out.printf("contains(\"World\"):%s\n",lin.contains("World"));
 		System.out.printf("size():%s\n",lin.size());
-		lin.remove("Hello");
-		System.out.printf("contains(\"Hello\"):%s\n",lin.contains("Hello"));
+		lin.remove("World");
+		System.out.printf("contains(\"World\"):%s\n",lin.contains("World"));
 		System.out.printf("size():%s\n",lin.size());
 		System.out.println(lin.isEmpty());
 		lin.clean();
@@ -31,7 +31,6 @@ public class LinkList {
 		for(int i=0;i<a.length;i++) {
 			System.out.println(a[i]);
 		}
-		
 		
 	}
 }
