@@ -20,6 +20,18 @@ public class LinkList {
 		lin.clean();
 		System.out.println(lin.isEmpty());
 		System.out.println(lin.size());
+		
+		// ---- toArray()≤‚ ‘
+		lin.add("1");
+		lin.add("2");
+		lin.add("3");
+		lin.add("4");
+		String [] a = lin.toArray();
+		System.out.println("------------------toArray≤‚ ‘--------------------");
+		for(int i=0;i<a.length;i++) {
+			System.out.println(a[i]);
+		}
+		
+		
 	}
-
 }

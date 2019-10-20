@@ -40,12 +40,19 @@ public class Link {
 					this.next.removeNode(this,data);
 				}
 			}
+			public void toArrayNode() {
+				Link.this.retData[Link.this.foot ++] = this.data;
+				if(this.next != null) {
+					this.next.toArrayNode();
+				}
+			}
 		}
 		// ============以上是内部类===============
 		// ----定义link的业务
 		private Node root; 	//根节点
 		private int count = 0; 	//统计节点的个数
 		private int foot;	//用来标记索引顺序
+		private String [] retData; //保存的对象数组
 		public void add(String data) {
 			if(data == null) {
 				return ;  	//保存的数据不能为null
@@ -90,5 +97,14 @@ public class Link {
 				this.root.next.removeNode(this.root,data);
 			}
 			this.count--;
+		}
+		public String [] toArray() {
+			if(this.count == 0) {
+				return null;  //没数据
+			}
+			this.foot = 0; //通过foot设置数组索引
+			this.retData = new String [this.count];  //开辟数组
+			this.root.toArrayNode(); //交给Node类来处理
+			return this.retData;
 		}
 }
